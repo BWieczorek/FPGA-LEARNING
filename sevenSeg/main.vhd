@@ -113,6 +113,10 @@ begin
 			Digit_1 <= Digit_1 + 1;
 		end if;
 	end if;
+	if(SW0 = '0') then
+		Digit_1 <= 0;
+		Digit_2 <= 0;
+	end if;
 end process;
 		OUTPUT_1 <= digit2sevenseg(Digit_1);
 		OUTPUT_2 <= digit2sevenseg(Digit_2);
