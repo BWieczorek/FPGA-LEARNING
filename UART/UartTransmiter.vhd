@@ -45,11 +45,11 @@ end UartTransmitter;
 architecture Behavioral of UartTransmitter is
 
 signal r_DataByte : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
-signal r_DATA_BIT_INDEX : INTEGER range 0 to 8 := 0;
+signal r_DATA_BIT_INDEX : INTEGER range 0 to 7 := 0;
 type t_UART_STATE is (s_WAITING_FOR_INPUT, s_START_BIT, s_TRANSMISION_IN_PROGRESS, s_STOP_BIT);
 signal r_UART_STATE: t_UART_STATE := s_WAITING_FOR_INPUT;
 signal r_TX_LINE : STD_LOGIC := '1';
-signal r_CLK_COUNTER: INTEGER range 0 to g_CLK_PRE_BIT := 0;
+signal r_CLK_COUNTER: INTEGER range 0 to 869:= 0;
 signal r_TRANSMISION_IN_PROGRESS_FLAG : STD_LOGIC := '0';
 signal r_DATA_TX_DONE : STD_LOGIC := '1';
 
@@ -112,15 +112,13 @@ MAIN_PROCESS: Process(i_CLK)
 						r_DATA_TX_DONE <= '1';
 					end if;
 		end case;
-			end if;
-			
-	end process;
-output : process (r_TX_LINE, r_DATA_TX_DONE, r_TRANSMISION_IN_PROGRESS_FLAG)
-begin
 	o_DATA_TX_LINE <= r_TX_LINE;
 	o_DATA_TX_DONE <= r_DATA_TX_DONE;
 	o_DATA_TX_INPROGRESS <= r_TRANSMISION_IN_PROGRESS_FLAG;
-end process;
+			end if;
+
+			
+	end process;
 
 
 end Behavioral;

@@ -69,7 +69,7 @@ ARCHITECTURE behavior OF UART_TRANSMITTER_TB IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: UartTransmiter PORT MAP (
+   uut: UartTransmitter PORT MAP (
           i_CLK => i_CLK,
           i_DataVector => i_DataVector,
           i_DATA_TX_FLAG => i_DATA_TX_FLAG,
