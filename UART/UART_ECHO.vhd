@@ -78,7 +78,7 @@ begin
 			 o_Parallel_Data => r_DATA_VECTOR
         );
 		  r_RX_LINE <= i_RX_LINE;
-		  o_TX_LINE <= not r_TX_LINE;
+		  o_TX_LINE <= r_TX_LINE;
 		  
 
 
