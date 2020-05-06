@@ -1,0 +1,4 @@
+ --> lookupTable_pkg
+lookupTable/Triggered Subsystem/MATLAB Function --> MATLAB_Function
+lookupTable/Triggered Subsystem --> Triggered_Subsystem
+lookupTable --> lookupTable

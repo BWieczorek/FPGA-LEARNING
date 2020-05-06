@@ -1,0 +1,17 @@
+vlib work
+vmap -c
+vcom  lookupTable_pkg.vhd
+vcom  nfp_add_single.vhd
+vcom  nfp_relop_single.vhd
+vcom  nfp_convert_double2single.vhd
+vcom  nfp_mul_single.vhd
+vcom  nfp_mod_single.vhd
+vcom  nfp_convert_single_to_fix_16_En0.vhd
+vcom  nfp_sub_double.vhd
+vcom  nfp_floor_single.vhd
+vcom  nfp_ceil_single.vhd
+vcom  nfp_relop_single_block.vhd
+vcom  lookupFun.vhd
+vcom  sys.vhd
+vcom  nfp_convert_fix_8_En0_to_single.vhd
+vcom  lookupTable.vhd
